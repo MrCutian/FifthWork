@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>第五次作业</title>
+<link rel="stylesheet" href="../css/index.css" />
+<script src="../js/Slider.js"></script>
+</head>
+
+<body>
+
+<!--最顶端-->
+<div class="top">
+	<span class="text">
+    	<a href="#">Research</a>&nbsp;|
+        <a href="#">Sitemap</a>&nbsp;|
+        <a href="#">User area</a>
+        <span style="margin-left:49%;"><img src="../img/head.png" title="这是图片"></span>
+    </span>
+</div>
+
+<!--分割线-->
+<div class="mark"></div>
+
+<!--标题-->
+<div class="head">
+    <img class="logo" src="../img/Logo.png" title="这是图片">
+    <span style="margin-left:480px;"></span>
+    <input class="input" type="text" value=" &nbsp;Input sth. and press the Enter" />
+</div>
+
+<!--导航部分-->
+<div class="navigation">
+	<ul class="text_2">
+    	<li><a href="#">HOME</a></li>
+        <!--导航键的分割线-->
+        <div class="line"></div>
+        <li><a href="#">ABOUT</a></li>
+        <!--导航键的分割线-->
+        <div class="line"></div>
+        <li><a href="#">SERVICES</a></li>
+        <!--导航键的分割线-->
+        <div class="line"></div>
+        <li><a href="#">PROJECTS</a></li>
+        <!--导航键的分割线-->
+        <div class="line"></div>
+        <li><a href="#">SOLUTION</a></li>
+        <!--导航键的分割线-->
+        <div class="line"></div>
+        <li><a href="#">JOBS</a></li>
+        <!--导航键的分割线-->
+        <div class="line"></div>
+        <li><a href="#">BLOG</a></li>
+        <!--导航键的分割线-->
+        <div class="line"></div>
+        <li><a href="#">CONTACTS</a></li>
+        <!--导航键的分割线-->
+        <div class="line"></div>
+    </ul>
+</div>
+
+<!--图片滑动部分-->
+<div class="container" id="idContainer2" style="margin-left:186px;; margin-top:30px;">
+	<ul id="idSlider2">
+    	<li>
+        	<div class="bg" style="background:url(../img/001.jpg);">
+            	<div class="inside text_2"><a href="#">Devil May Cry 15th January,2013 </a></div>
+                
+            </div>
+        </li>
+        <li>
+        	<div class="bg" style="background:url(../img/yueyu.jpg);">
+            	<div class="inside text_2"><a href="#">Prison Break </a></dv>
+            </div>
+        </li>
+        <li>
+        	<div class="bg" style="background:url(../img/20131022222049949.jpg);">
+            	<div class="inside text_2"><a href="#">About Google </a></div>
+            </div>
+        </li>
+    </ul>
+</div>
+<!--按钮-->
+<ul class="num" id="idNum" style="margin-left:50%; list-style:none;">
+</ul>
+<!--按钮脚本（转载）-->
+<script type="text/javascript">
+var nums = [], timer, n = $$("idSlider2").getElementsByTagName("li").length,
+	st = new SlideTrans("idContainer2", "idSlider2", n, {
+		onStart: function(){
+			//设置按钮样式
+			forEach(nums, function(o, i){ o.className = st.Index == i ? "on" : ""; })
+		}
+	});
+for(var i = 1; i <= n; AddNum(i++)){};
+function AddNum(i){
+	var num = $$("idNum").appendChild(document.createElement("li"));
+	num.innerHTML = i--;
+	num.onmouseover = function(){
+		timer = setTimeout(function(){ num.className = "on"; st.Auto = false; st.Run(i); }, 30);
+	}
+	num.onmouseout = function(){ clearTimeout(timer); num.className = ""; st.Auto = true; st.Run(); }
+	nums[i] = num;
+}
+st.Run();
+</script>
+
+<!--底端文字部分-->
+<div class="table">
+	<!--左边-->
+	<div class="left">
+    	<div class="text_left">Hello Stranger!</div>
+        <!--分割线-->
+        <div class="line_1"></div>
+        <img src="../img/Lorem ipsum dolor sit amet, consectetur adipiscing elit.png" style="margin-top:10px;" title="这是图片"/><br />
+        <a href="#"><img src="../img/Btn_1.png" style="margin-top:40px;"/></a>
+    </div>
+    <!--右边-->
+    <div class="right">
+    	<div class="text_right">Our Services</div>
+        <!--分割线-->
+        <div class="line_2"></div>
+        <ul>
+        	<li><a href="#">Maecenas elementum tortor id massa lobortis</a></li>
+            <li><a href="#">Lipsum amet accumsan ultricles mi,et adipin</a></li>
+            <li><a href="#">Mautis nibh condimentun tortor sodales feufiat</a></li>
+            <li><a href="#">this is another hyperlink.</a></li>
+            <li><a href="#">Dante is the son of spada</a></li>
+            <li><a href="#">Mautis nibh condimentun tortor sodales feufiat</a></li>
+            <li><a href="#">Dante have a brother.</a></li>
+        </ul>
+    </div>
+    <!--底部左边-->
+    <div class="bottom_left">
+    <img src="../img/Featured Games.png" style="margin-bottom:15px;" title="这是图片"/>
+    <!--分割线-->
+    <div class="line_1"></div>
+    <img src="../img/Lorem ipsum dolor sit amet, consectetur adipiscing elit1.png" style="margin-top:15px;" title="这是图片" />
+    <div class="BL_bg">
+    	<img src="../img/ARROW_L.png" style=" margin-top:81px; margin-left:10px;">
+        	<ul>
+            	<li><img src="../img/001.jpg">TITLE 1 GOES HERE</li>
+                <li><img src="../img/001.jpg">TITLE 2 GOES HERE</li>
+                <li><img src="../img/001.jpg">TITLE 3 GOES HERE</li>
+                <li><img src="../img/001.jpg">TITLE 4 GOES HERE</li>
+            </ul>
+        <img src="../img/ARROW_R.png" style=" margin-top:40px; margin-left:30px;">
+    </div>
+    </div>
+    <!--底部右边-->
+    <div class="bottom_right">
+    <img src="../img/Contact Us.png" style="margin-bottom:15px;" title="这是图片" />
+    <!--分割线-->
+    <div class="line_2">
+    <img src="../img/Email- info@yoururl.png" style="margin-top:15px;">
+    <img src="../img/Location.png" style="width:270px; height:140px">
+    </div>
+    </div>
+</div>
+<!--最底端部分-->
+<span class="text">
+<a href="#">Home</a>
+&nbsp;|&nbsp;
+<a href="#">About</a>
+&nbsp;|&nbsp;
+<a href="#">Services</a>
+&nbsp;|&nbsp;
+<a href="#">Projects</a>
+&nbsp;|&nbsp;
+<a href="#">Solutions</a>
+&nbsp;|&nbsp;
+<a href="#">Jobs</a>
+&nbsp;|&nbsp;
+<a href="#">Blog</a>
+&nbsp;|&nbsp;
+<a href="#">Contacts</a>
+<span style="margin-left:90px;">Copyright 2013 | Website.Design by <a href="#" style="color:#999">Jiang</a></span>
+</span>
+
+</body>
+</html>
